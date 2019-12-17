@@ -1,0 +1,26 @@
+body {
+    font-family: 'Helvetica';
+    background-color: #F6F9F9;
+}
+
+a {
+    cursor: pointer;
+}
+
+.left3 {
+    margin-left: -3%;
+}
+
+.gridster-loaded .gridster-item{
+    background: #999;
+}
+.removeBtn{
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.removeBtn:hover{color: #fff}
+.removeBtn:active{color: #fff}

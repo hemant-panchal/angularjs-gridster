@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="well">
+    <h2>Welcome</h2>
+  </div>
+  <!-- <form class="form-inline">
+  <div class="form-group">
+    <label for="email">Width</label>
+    <input type="number" class="form-control" ng-model="add_new.width">
+  </div>
+  <div class="form-group">
+    <label for="email">Height</label>
+    <input type="number" class="form-control" ng-model="add_new.height">
+  </div>
+  <div class="form-group">
+    <label for="email">Row</label>
+    <input type="number" class="form-control" ng-model="add_new.row">
+  </div>
+
+
+  <button  class="btn btn-default" ng-click="addNew()">Add</button>
+</form> -->
+<ul class="nav nav-pills nav-justified">
+  <li ng-class="{'active': activeUser == 'user1'}"><a ng-click="setActiveUser('user1')">User 1</a></li>
+  <li ng-class="{'active': activeUser == 'user2'}"><a ng-click="setActiveUser('user2')">User 2</a></li>
+  <li ng-class="{'active': activeUser == 'user3'}"><a ng-click="setActiveUser('user3')">User 2</a></li>
+
+</ul>
+<br>
+  <div gridster="gridsterOpts">
+  	<ul>
+  		<li gridster-item="item" ng-repeat="item in standardItems track by $index">
+        <span class="badge removeBtn">{{$index + 1}}</span>
+        <div>
+          <form class="form-inline">
+          <div class="form-group">
+            <button ng-click="addNew($index, item)" type="button" class="btn btn-default btn-sm">
+              <i class="fa fa-plus" aria-hidden="true"></i> Add
+            </button>
+          </div>
+          <div class="form-group">
+            <button ng-click="remove($index, item)" type="button" class="btn btn-default btn-sm">
+              <i class="fa fa-times" aria-hidden="true"></i> Remove
+            </button>
+          </div>
+        </form>
+
+        </div>
+
+      </li>
+  	</ul>
+  </div>
+</div>
